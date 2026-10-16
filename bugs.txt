@@ -1,0 +1,11 @@
+In the style,on line 7 the background-color property should be written like that in order to change the background color of the body.
+In the script,on line 24 the ID should be nameInput and not name,because there is no such ID.
+In the script,lines 29 and 30 should be witched because I need to create the variable first and then change its background color.
+In the script,after switching lines 29 and 30,on line 29 the ID should be box and not boxx because there is no such ID.
+In the script on line 30,to change the background color we should write box.style.backgroundColor not document because document represents the whole HTML file and not the HTML element I want to syle which is here the <div>.Also there is a typo for style, it is written as styel and with no peroid before it.
+In the style on line 13, there should be a relative position in order for the box to move to the left as mentioned on line 32 in the script.
+In the script on line 34,there is no millieseconds delay,which will make my box move at maximum speed and later it can cause freezing the entire page.
+In the script on line 28, I should put let interval in order to create the variable for this setInterval.
+In the script the variable counter should be inside the start button so that it can reset to 0 every time it gets clicked.
+In the script on line 35,there is only a comparison of the value of the counter to 10,so it won't do anything without a condition to clear the interval without this the box will move till forever.
+In the script on line 35,I changed the comparison to 300 so that it can move more space before it stops moving.

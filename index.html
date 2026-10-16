@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buggy Example</title>
+<style>
+    body{
+        background-color:lightblue;/*This line of code sets the background color of our page to lightblue*/
+    }
+    #box{
+        width:100px;
+        height:100px;
+        background:red;
+        position:relative;/*This will allow the box to have left,right,top,and bottom properties which are present in the interval styling the box,which will make it move across the screen.*/
+    }
+</style>
+</head>
+<body>
+    <h1>Bug Practice</h1>
+    <input id="nameInput" type="text">
+    <button onclick="start()">Start</button>
+    <div id="box"></div>
+    <script>
+        let interval;//Declares the variable globally so we can clear it//
+        function start(){
+            let input=document.getElementById("nameInput");//This creates a local  variable input to store  the element with the id nameInput instead of repeating document.getElementById every single time//
+            console.log(input.value);
+            let counter=0;//Resets counter to 0 EVERY time it's clicked//
+            clearInterval(interval);//This will clear any running interval and reset counter for repeat clicks.//
+            interval=setInterval(function(){
+            counter++;
+            let box=document.getElementById("box")//This creates a local variable named box to store the element with the ID box,and also can help me stop repeating document.getElementById every time//
+            box.style.backgroundColor="yellow";//This sets the background color of the element which has the ID associated with this variable into yellow//
+            box.style.left=counter+"px";
+            if (counter==390){
+                clearInterval(interval);//This condition will make the stop maving after it has slid 300 pixels.//
+            };
+         },10);}//This line of code will make the function run every 10 milliseconds to make the box slide smoothly on the screen.//
+
+    </script>
+</body>
+</html>
